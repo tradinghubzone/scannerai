@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sniper Terminal | US500, US30 & US100 Live Bot</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2/v=Montserrat:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --mt5-bg: #121212;
+            --mt5-panel: #1e1e1e;
+            --mt5-border: #2d2d2d;
+            --mt5-accent: #2962FF;
+            --mt5-green: #00E676;
+            --mt5-red: #FF5252;
+            --mt5-text: #E0E0E0;
+            --mt5-dim: #888888;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--mt5-bg);
+            color: var(--mt5-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top MT5 Header Bar */
+        header {
+            background: var(--mt5-panel);
+            border-bottom: 1px solid var(--mt5-border);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-area i {
+            color: var(--mt5-accent);
+            font-size: 1.4rem;
+        }
+
+        .brand-area h1 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-area h1 span {
+            color: var(--mt5-green);
+            font-size: 0.75rem;
+            display: block;
+            font-weight: 400;
+        }
+
+        .status-pill {
+            background: rgba(0, 230, 118, 0.1);
+            color: var(--mt5-green);
+            border: 1px solid rgba(0, 230, 118, 0.3);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-family: 'Roboto Mono', monospace;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-pill span {
+            width: 8px;
+            height: 8px;
+            background: var(--mt5-green);
+            border-radius: 50%;
+            animation: pulse 1.5px infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        /* Main Container Views */
+        .app-container {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Paywall Modal View */
+        #paywallView {
+            background: var(--mt5-panel);
+            border: 1px solid var(--mt5-border);
+            border-radius: 8px;
+            padding: 35px;
+            max-width: 550px;
+            margin: 40px auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        #paywallView h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10
+  
